@@ -23,8 +23,7 @@ public class Book {
 	private Publisher publisher;
 	
 	@ManyToMany
-	@JoinTable(name="author_book",joinColumns=@JoinColumn(name="book_id"),
-	inverseJoinColumns = @JoinColumn(name = "author_id"))
+	
 	private Set<Author> authors = new HashSet<>();
 
 	public Book() {
@@ -112,11 +111,11 @@ public class Book {
 		return true;
 	}
 
-	@Override
-	public String toString() {
-		return "Book [Id=" + Id + ", title=" + title + ", isbn=" + isbn + ", publisher=" + publisher + ", authors="
-				+ authors + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "Book [Id=" + Id + ", title=" + title + ", isbn=" + isbn + ", publisher=" + publisher + ", authors="
+//				+ authors + "]";
+//	}
 	
 	
 
